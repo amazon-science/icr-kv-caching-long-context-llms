@@ -1,7 +1,7 @@
 torch>=2.6.0
 torchvision 
 torchaudio
-vllm==0.8.3
+vllm==0.14.1
 sentence-transformers
 faiss-gpu-cu12>=1.10.0
 datasets
