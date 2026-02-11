@@ -1,0 +1,27 @@
+seed: 42
+output_dir: data/outputs
+
+model_name: THUDM/glm-4-9b-chat-1m
+device: cuda
+
+vllm_params:
+  gpu_memory_utilization: 0.8
+  max_model_len: 1048576
+  max_num_batched_tokens: 8192
+  enforce_eager: true 
+
+sampling_params:
+  temperature: 0.0
+  n: 1
+  max_tokens: 2048
+  stop_token_ids: [151329, 151336, 151338]
+
+dataset:
+  data_loader: LongBench-v2
+  path: THUDM/LongBench-v2
+  split: train
+  name: null
+  prompt_obj: prompts/inference/LongBench-v2/zero_shot.json
+
+retrieval:
+  mode: "full"

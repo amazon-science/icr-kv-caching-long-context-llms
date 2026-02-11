@@ -1,0 +1,26 @@
+seed: 42
+output_dir: data/outputs
+
+model_name: THUDM/glm-4-9b-chat
+device: cuda
+
+vllm_params:
+  gpu_memory_utilization: 0.8
+  max_model_len: 131072
+  enforce_eager: true  
+
+sampling_params:
+  temperature: 0.0
+  n: 1
+  max_tokens: 2048
+  stop_token_ids: [151329, 151336, 151338]
+
+dataset:
+  data_loader: InfiniteBench
+  path: xinrongzhang2022/InfiniteBench
+  split: longbook_qa_eng
+  name: null
+  prompt_obj: prompts/inference/InfiniteBench/zero_shot.json
+
+retrieval:
+  mode: "full"

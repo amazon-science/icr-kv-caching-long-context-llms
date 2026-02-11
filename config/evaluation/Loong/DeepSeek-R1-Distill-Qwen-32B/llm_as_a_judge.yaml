@@ -1,0 +1,16 @@
+seed: 42
+output_dir: data/evaluation
+
+model_name: deepseek-ai/DeepSeek-R1-Distill-Qwen-32B
+device: cuda
+
+vllm_params:
+  gpu_memory_utilization: 0.9
+  max_model_len: 8192
+
+sampling_params:
+  temperature: 0.0
+  n: 1
+  max_tokens: 8192
+
+prompt_obj: prompts/evaluation/Loong/llm_as_a_judge.json

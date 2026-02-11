@@ -1,0 +1,11 @@
+[{
+  "split": "financial",
+  "system_instruction": "You are an expert in answering questions about financial reports.",
+  "user_content_template": "Documents: {context}\n\nInstruction: Given the above financial statements split in a set of documents, answer the following question by following these steps:\n\n1. Identify the relevant documents. Each document is identified by a tag in the form [DOC i], where i is the index of the document in the context.\n   - If you find relevant documents, output their IDs exactly as shown, separated by commas. Example: [DOC i], [DOC j], [DOC k].\n   - If no documents are relevant, output only: [DOC -1].\n\n2. On a new line, provide your answer in the following format:\n   The answer is: <your answer here>.\n\nQuestion: {question}."
+
+},
+{
+  "split": "paper",
+  "system_instruction": "You are an expert in answering questions about scientific papers.",
+  "user_content_template": "Documents: {context}\n\nInstruction: Given the above scientific papers split in a set of documents, answer the following question by following these steps:\n\n1. Identify the relevant documents. Each document is identified by a tag in the form [DOC i], where i is the index of the document in the context.\n   - If you find relevant documents, output their IDs exactly as shown, separated by commas. Example: [DOC i], [DOC j], [DOC k].\n   - If no documents are relevant, output only: [DOC -1].\n\n2. On a new line, provide your answer in the following format:\n   The answer is: <your answer here>.\n\nQuestion: {question}."
+}]

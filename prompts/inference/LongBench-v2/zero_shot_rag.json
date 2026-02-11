@@ -1,0 +1,4 @@
+{
+  "system_instruction": "You are an expert in multiple-choice question answering.",
+  "user_content_template": "Please read the following text and answer the question below.\n\n<text>\n{DOC}\n</text>\n\nWhat is the correct answer to this question: {Q}\nChoices:\n(A) {C_A}\n(B) {C_B}\n(C) {C_C}\n(D) {C_D}\n\nFormat your response as follows: \"The correct answer is (insert answer here)\"."
+}

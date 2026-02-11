@@ -1,0 +1,6 @@
+[{
+  "split": "kilt",
+  "system_instruction": "You are an expert in question answering.",
+  "user_content_template": "Question: {question}\n\nWrite your concise and short answer in the following format:\n\nAnswer: <your answer>."
+}
+]

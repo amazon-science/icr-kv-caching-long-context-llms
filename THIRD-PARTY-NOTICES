@@ -1,0 +1,29 @@
+# Third-Party Notices
+
+This repository incorporates or is based on third-party software components. The following notices are provided in compliance with the license conditions of those components:
+
+---
+
+## 1. DensePhrases Evaluation Utilities
+
+**Source**: https://github.com/princeton-nlp/DensePhrases/blob/main/densephrases/utils/eval_utils.py
+**Files**: `src/amzn_long_context_rag/evaluation/helmet_eval.py`
+**Description**: Evaluation utilities for question answering tasks, including answer normalization, F1 score computation, and document ID matching.
+**License**: MIT License
+**Copyright**: Copyright (c) 2021 Princeton NLP
+
+The file `src/amzn_long_context_rag/evaluation/helmet_eval.py` contains code adopted from the DensePhrases project's evaluation utilities.
+
+---
+
+## 2. Attributed-QA Evaluation
+
+**Source**: https://github.com/google-research-datasets/Attributed-QA/blob/main/evaluation.py
+**Files**: `src/amzn_long_context_rag/evaluation/helmet_alce_eval.py`
+**Description**: NLI-based evaluation for assessing Attributable to Identified Sources (AIS) between premises and hypotheses, including AutoAIS scoring.
+**License**: Apache License 2.0
+**Copyright**: Copyright 2023 Google LLC
+
+The file `src/amzn_long_context_rag/evaluation/helmet_alce_eval.py` contains code adapted from the Attributed-QA evaluation framework, specifically the `_run_nli_autoais` function.
+
+---

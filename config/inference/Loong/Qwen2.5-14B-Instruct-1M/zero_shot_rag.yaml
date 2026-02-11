@@ -1,0 +1,30 @@
+seed: 42
+output_dir: data/outputs
+
+model_name: Qwen/Qwen2.5-14B-Instruct-1M
+device: cuda
+
+vllm_params:
+  gpu_memory_utilization: 0.95
+  max_model_len: 1010000
+  max_num_batched_tokens: 131072
+  enforce_eager: true  
+
+sampling_params:
+  temperature: 0.0
+  n: 1
+  max_tokens: 2048
+
+dataset:
+  data_loader: Loong
+  path: framolfese/Loong
+  split: financial
+  name: null
+  prompt_obj: prompts/inference/Loong/zero_shot_rag.json
+
+retrieval:
+  mode: "topk"               # "full" | "topk" | "none"
+  index_dir: "data/indexes"  # root directory containing <id>/faiss.index
+  top_k: -1                  # how many chunks to retrieve per query
+  embedding_model_name: "Qwen/Qwen3-Embedding-4B"
+  max_tokens: 2048

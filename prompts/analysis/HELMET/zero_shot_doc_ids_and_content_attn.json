@@ -1,0 +1,6 @@
+[{
+  "split": "kilt",
+  "system_instruction": "You are an expert in question answering.",
+  "user_content_template": "Documents: {context}\n\nInstruction: You are given a set of documents and a question. Your task is to:\n\n1. Identify which documents are most relevant to answering the question\n2. Extract and reproduce the IDs and the full content of those relevant documents\n3. Provide the final answer based on the relevant documents\n\nFollow this exact format in your response:\n\nRelevant documents:\n[DOC X]\n<full content of first relevant document>\n\n[DOC Y]\n<full content of second relevant document>\n\n(continue for all relevant documents)\n\nThe answer is: <your final answer>\n\nImportant guidelines:\n- Only include documents that directly help answer the question\n- Reproduce the ID and the complete content of each relevant document exactly as provided\n- The final answer should be concise and directly address the question\n- Base your answer on information found in the relevant documents you identified\n- Output your answer after the relevant documents you identified\n- Do not include documents that are less related or irrelevant\n\nQuestion: {question}."
+}
+]

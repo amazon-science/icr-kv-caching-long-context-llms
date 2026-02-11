@@ -1,0 +1,33 @@
+seed: 42
+output_dir: data/outputs
+
+model_name: THUDM/glm-4-9b-chat-1m
+device: cuda
+
+vllm_params:
+  gpu_memory_utilization: 0.8
+  max_model_len: 1048576
+  max_num_batched_tokens: 8192
+  enforce_eager: true  
+
+sampling_params:
+  temperature: 0.0
+  n: 1
+  max_tokens: 2048
+  stop_token_ids: [151329, 151336, 151338]
+
+dataset:
+  data_loader: Loong
+  path: framolfese/Loong
+  split: financial
+  name: null
+  prompt_obj: prompts/inference/Loong/zero_shot_rag.json
+
+retrieval:
+  mode: "topk"               # "full" | "topk" | "none"
+  index_dir: "data/indexes"  # root directory containing <id>/faiss.index
+  top_k: -1                  # how many chunks to retrieve per query
+  embedding_model_name: "Qwen/Qwen3-Embedding-4B"
+  max_tokens: 2048
+  use_offline_hits: true
+  offline_hits_path: "data/retriever/outputs"

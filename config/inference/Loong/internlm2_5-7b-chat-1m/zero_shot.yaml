@@ -1,0 +1,26 @@
+seed: 42
+output_dir: data/outputs
+
+model_name: internlm/internlm2_5-7b-chat-1m
+device: cuda
+
+vllm_params:
+  gpu_memory_utilization: 0.8
+  max_model_len: 1048576
+  max_num_batched_tokens: 8192
+  enforce_eager: true 
+
+sampling_params:
+  temperature: 0.0
+  n: 1
+  max_tokens: 2048
+
+dataset:
+  data_loader: Loong
+  path: framolfese/Loong
+  split: financial
+  name: null
+  prompt_obj: prompts/inference/Loong/zero_shot.json
+
+retrieval:
+  mode: "full"

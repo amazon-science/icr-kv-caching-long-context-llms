@@ -1,0 +1,10 @@
+[{
+  "split": "financial",
+  "system_instruction": "You are an expert in answering questions about financial reports.",
+  "user_content_template": "{context}\n\n{instruction}\n\n{question}."
+},
+{
+  "split": "paper",
+  "system_instruction": "You are an expert in answering questions about scientific papers.",
+  "user_content_template": "#Papers:\n\n{context}\n\n{instruction}\n\n#The paper you need to analyze:\n\n{question}"
+}]

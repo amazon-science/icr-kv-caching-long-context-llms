@@ -1,0 +1,4 @@
+{
+  "system_instruction": "You are an expert in multiple-choice question answering.",
+  "user_content_template": "What is the correct answer to this question: {Q}\nChoices:\n(A) {C_A}\n(B) {C_B}\n(C) {C_C}\n(D) {C_D}\n\nWhat is the single, most likely answer choice? Format your response as follows: 'The correct answer is (insert answer here)'."
+}

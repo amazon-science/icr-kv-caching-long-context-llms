@@ -1,0 +1,16 @@
+torch>=2.6.0
+torchvision 
+torchaudio
+vllm==0.8.3
+sentence-transformers
+faiss-gpu-cu12>=1.10.0
+datasets
+transformers
+jsonlines
+loguru
+omegaconf
+evaluate
+rouge-score
+git+https://github.com/Andrew-Wyn/xFinder.git@decode-fix
+# xformers==0.0.29.post3 --no-build-isolation
+# flash-attn==2.7.4.post1 --no-build-isolation

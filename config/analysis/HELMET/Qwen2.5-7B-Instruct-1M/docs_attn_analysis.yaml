@@ -1,0 +1,35 @@
+seed: 42
+output_dir: data/analysis
+
+# Model and context parameters
+model_name: Qwen/Qwen2.5-7B-Instruct-1M
+context_max_tokens: null
+device_map: auto
+
+docs_top_k: 10 # Only for topk_docs_attn_analysis
+ndcg_k: 10 # Only for ndcg_docs_attn_analysis
+# Choose the layers for the analysis
+attention_strategy: all_layers
+layer_idx: -1
+last_n: 4
+
+# Toggle attention sink removal on/off
+remove_attention_sinks: true
+sink_threshold_pct: 5.0 # Tokens above 5% attention = potential sinks
+max_sink_position: 1000 # Only check first 1000 chars for sinks
+
+# Print the top-attended documents and spans for debugging
+analyze_top_attention: true
+
+# Decoding parameters
+max_new_tokens: 512 
+temperature: 0.0
+do_sample: false
+
+# Dataset
+dataset:
+  data_loader: HELMET
+  path: data/benchmarks/HELMET
+  split: kilt
+  name: hotpotqa-dev-multikilt_1000_k220_dep3
+  prompt_obj: prompts/analysis/HELMET/zero_shot_attn.json

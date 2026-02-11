@@ -1,0 +1,26 @@
+seed: 42
+output_dir: data/outputs
+
+model_name: Qwen/Qwen2.5-7B-Instruct-1M
+device: cuda
+
+vllm_params:
+  gpu_memory_utilization: 0.9
+  max_model_len: 1010000
+  max_num_batched_tokens: 131072
+  enforce_eager: true  
+
+sampling_params:
+  temperature: 0.0
+  n: 1
+  max_tokens: 2048
+
+dataset:
+  data_loader: LongBench-v2
+  path: THUDM/LongBench-v2
+  split: train
+  name: null
+  prompt_obj: prompts/inference/LongBench-v2/zero_shot_no_context.json
+
+retrieval:
+  mode: "none"

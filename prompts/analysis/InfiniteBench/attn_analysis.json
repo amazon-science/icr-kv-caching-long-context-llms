@@ -1,0 +1,15 @@
+[{
+  "split": "longbook_qa_eng",
+  "system_instruction": "You are an expert in answering questions about books.",
+  "user_content_template": "Read the book below and answer the question.\n\n{context}\n\nQuestion: {question}\n\nFormat your response as follows: \"The answer is (insert answer here)\"."
+},
+{
+  "split": "longbook_sum_eng",
+  "system_instruction": "You are an expert in summarizing books.",
+  "user_content_template": "Summarize the book below.\n\n{context}."
+},
+{
+  "split": "longbook_choice_eng",
+  "system_instruction": "You are an expert in multiple-choice question answering about books.",
+  "user_content_template": "Read the book below and answer the question.\n\n{context}\n\nQuestion: {question}\n\nOnly one of the following options is correct:\n\nA. {choice_a}\nB. {choice_b}\nC. {choice_c}\nD. {choice_d}\n\nFormat your response as follows: \"The answer is (insert answer here)\"."
+}]

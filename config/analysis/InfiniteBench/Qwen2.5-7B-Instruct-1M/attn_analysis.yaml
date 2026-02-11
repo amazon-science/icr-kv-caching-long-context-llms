@@ -1,0 +1,25 @@
+seed: 42
+output_dir: data/analysis
+
+model_name: Qwen/Qwen2.5-7B-Instruct-1M
+context_max_tokens: null
+attn_top_k: 8000
+sentence_top_k: 100
+chunk_top_k: 5
+device_map: auto
+maximum_input_length: 64000
+
+dataset:
+  data_loader: InfiniteBench
+  path: xinrongzhang2022/InfiniteBench
+  split: longbook_qa_eng
+  name: null
+  prompt_obj: prompts/analysis/InfiniteBench/attn_analysis.json
+
+retrieval:
+  index_dir: "data/indexes"  # root directory containing <id>/faiss.index
+  top_k: -1                  # how many chunks to retrieve per query
+  embedding_model_name: "Qwen/Qwen3-Embedding-4B"
+  max_tokens: 2048
+  use_offline_hits: true
+  offline_hits_path: "data/retriever/outputs"

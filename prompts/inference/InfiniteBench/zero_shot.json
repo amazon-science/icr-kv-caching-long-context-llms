@@ -1,0 +1,55 @@
+[{
+  "split": "longbook_qa_eng",
+  "system_instruction": "You are an expert in answering questions about books.",
+  "user_content_template": "Read the book below and answer the question.\n\n{context}\n\nQuestion: {question}\n\nFormat your response as follows: \"The answer is (insert answer here)\"."
+},
+{
+  "split": "longbook_sum_eng",
+  "system_instruction": "You are an expert in summarizing books.",
+  "user_content_template": "Summarize the book below.\n\n{context}."
+},
+{
+  "split": "longbook_choice_eng",
+  "system_instruction": "You are an expert in multiple-choice question answering about books.",
+  "user_content_template": "Read the book below and answer the question.\n\n{context}\n\nQuestion: {question}\n\nOnly one of the following options is correct:\n\nA. {choice_a}\nB. {choice_b}\nC. {choice_c}\nD. {choice_d}\n\nFormat your response as follows: \"The answer is (insert answer here)\"."
+},
+{
+  "split": "passkey",
+  "system_instruction": "You are an expert in finding information hidden inside text.",
+  "user_content_template": "There is an important info hidden inside a lot of irrelevant text. Find it and memorize them. I will quiz you about the important information there.\n\n{context}\n\n{input}\n\nThe pass key is"
+},
+{
+  "split": "number_string",
+  "system_instruction": "You are an expert in finding information hidden inside text.",
+  "user_content_template": "There is an important info hidden inside a lot of irrelevant text. Find it. I will quiz you about the important information there.\n\n{context}\n\n{input}\n\nThe sequence of digits is"
+},
+{
+  "split": "kv_retrieval",
+  "system_instruction": "You are an expert in extracting values from keys contained in JSON obejcts.",
+  "user_content_template": "Extract the value corresponding to the specified key in the JSON object below.\n\n{context}\n\n{input}"
+},
+{
+  "split": "math_find",
+  "system_instruction": "You are an expert in mathematics.",
+  "user_content_template": "{prefix}\n\n{context}\n\n{input}"
+},
+{
+  "split": "math_calc",
+  "system_instruction": "You are an expert in mathematics.",
+  "user_content_template": "Let us calculate the intermediate values of an expression.\nExpression: 1 + 3 + 4\nValues: [1, 4, 8]\n\nExpression: 8 - 3 + 2 - 4\nValues: [8, 5, 7, 3]\n\nExpression: {context}\nValues:"
+},
+{
+  "split": "code_run",
+  "system_instruction": "You are an expert in reading, understanding and interpreting python code.",
+  "user_content_template": "There is a function called {func} in the following Python code.\n\n{context}\n\nPlease compute the exact value of {func_call}. The value of {func_call} is"
+},
+{
+  "split": "code_debug",
+  "system_instruction": "You are an expert in multiple-choice question answering about python code.",
+  "user_content_template": "Following is a Python code where exactly one of the functions/methods has a deliberate error that makes it crash.\n\n{context}\n\nOptions:\nA. {OPTION_A}\nB. {OPTION_B}\nC. {OPTION_C}\nD. {OPTION_D}\n\nThe correct option is:"
+},
+{
+  "split": "longdialogue_qa_eng",
+  "system_instruction": "You are an expert in answering questions about dialogue scripts.",
+  "user_content_template": "Below is a dialogue script where one random occurrence of a character name is replaced with \"$$MASK$$\", and you should try to guess who that character is.\n\n{context}\n\nThe name that has been replaced with $$MASK$$ is likely"
+}]
